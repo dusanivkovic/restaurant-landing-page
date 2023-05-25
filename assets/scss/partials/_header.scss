@@ -1,0 +1,19 @@
+header {
+    height: 100vh;
+    img {
+        position: absolute;
+        z-index: -999;
+    }
+    .logo {
+        text-transform: uppercase
+    }
+    nav {
+        @include flex (space-around);
+        .nav-list {
+            @include flex (space-between, center, row, nowrap, 1em );
+        }
+    }
+    .social {
+        @include flex (space-between, center, row, nowrap, 1em);
+    }
+}
