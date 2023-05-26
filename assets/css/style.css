@@ -75,6 +75,14 @@ h4 {
   font-weight: 300;
 }
 
+.btn {
+  border-radius: 15px;
+  padding: 8px 15px;
+  text-transform: uppercase;
+  background-color: #C8FF8C;
+  color: #000;
+}
+
 header {
   height: 100vh;
 }
@@ -82,12 +90,20 @@ header img {
   position: absolute;
   z-index: -999;
 }
+header h1,
+header p,
+header h4 {
+  color: #F2F2F2;
+}
 header .logo {
   text-transform: uppercase;
+  font-size: 2.2rem;
 }
 header nav {
+  height: 10vh;
+  padding: 3.1em 2em;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -108,4 +124,57 @@ header .social {
   flex-direction: row;
   flex-wrap: nowrap;
   gap: 1em;
+}
+header .social a {
+  border: 1px solid #fff;
+  border-radius: 50%;
+  padding: 5px;
+  text-align: center;
+  width: 2em;
+  height: 2em;
+}
+header .hero {
+  width: 32%;
+  margin-top: 5em;
+  margin-left: 2.9em;
+}
+header .hero p {
+  margin-left: 1.2em;
+  font-size: 1.2rem;
+}
+header .search {
+  border-radius: 15px;
+  width: 80%;
+  background-color: #2C4664;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0px;
+  margin: 0 auto;
+  color: #F2F2F2;
+}
+header .search > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0px;
+  flex: 0 1 20%;
+  position: relative;
+  padding: 2.2em 1em;
+}
+header .search > div::after {
+  content: "";
+  background: white;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 1.5px;
+}
+header .search > div button {
+  margin: o auto;
 }
