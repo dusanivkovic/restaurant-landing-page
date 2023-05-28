@@ -22,3 +22,8 @@
         @content;
     }
 }
+@mixin breakpointsMin($bp) {
+    @media(min-width:$bp) {
+        @content;
+    }
+}

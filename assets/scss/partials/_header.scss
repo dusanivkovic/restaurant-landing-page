@@ -1,70 +1,181 @@
 header {
-    height: 100vh;
+    height: 130vh;
     img {
         position: absolute;
+        height: 130vh;
         z-index: -999;
     }
     h1,
     p,
-    h4 {
+    h4,
+    h5 {
         color: $backgrundColor;
     }
     .logo {
         text-transform: uppercase;
         font-size: 2.2rem;
     }
-    nav {
-        height: 10vh;
-        padding: 3.1em 2em;
-        @include flex (space-between);
-        .nav-list {
-            @include flex (space-between, center, row, nowrap, 1em );
+}
+nav {
+    height: 10vh;
+    padding: 3.1em 2em;
+    @include flex (space-between);
+    #navMenu {
+        @include flex (space-between, center, row, nowrap, 1em );
+        @include breakpoints(768px) {
+            display: none;
+            @include positioning(absolute, 70px, 0, 0, 0, 100%, 90vh);
+            padding-left: 20px;
+            z-index: 1;
+            background-color: $primarycolor;
         }
+    }
+    button {
+        color: $borderColor!important;
+        @include breakpointsMin(769px) {
+            visibility: hidden;
+            width: 0;
+        }
+    }
+    .navbar-toggle {
+        border: none;
+        background: transparent;
+        visibility: hidden;
+        z-index: 10;
+        @include breakpoints(768px) {visibility: visible;}
+        .icon-bar {
+            display: block;
+            background-color: $backgrundColor;
+            height: 2px;
+            margin: 4px 0;
+            width: 22px;
+        }
+        .top-bar {
+            transform: rotate(45deg);
+            transform-origin: 10% 10%;
+          }
+          .middle-bar {
+            opacity: 0;
+          }
+          .bottom-bar {
+            transform: rotate(-45deg);
+            transform-origin: 10% 90%;
+          }
+          &.collapsed {
+            .top-bar {
+              transform: rotate(0);      
+            }
+            .middle-bar {
+              opacity: 1;
+            }
+            .bottom-bar {
+              transform: rotate(0);
+            }
+        }
+    }
+}
+.hero {
+    width: 32%;
+    margin-top: $marginV;
+    margin-left: $marginleft;
+    p {
+        margin-left: 1.2em;
+        font-size: 1.2rem;
     }
     .social {
         @include flex (space-between, center, row, nowrap, 1em);
+        @include breakpointsMin(769px) {
+            position: absolute;
+            top: 2.1em;
+            right: 3%;
+        }
         a {
-            border: 1px solid $whiteColor;
+            border: 1px solid $backgrundColor;
             border-radius: 50%;
-            padding: 5px;
             text-align: center;
             width: 2em;
             height: 2em;
         }
     }
-    .hero {
-        width: 32%;
-        margin-top: $marginTop;
-        margin-left: $marginleft;
-        p {
-            margin-left: 1.2em;
-            font-size: 1.2rem;
+}
+.search {
+    @include breakpoints (576px) {
+        display: none;
+    }
+    border-radius: 15px;
+    width: 85%;
+    background-color: $secondaryColor;
+    @include flex (space-between, flex-start, row, wrap);
+    margin: $marginV auto 0;
+    color: $backgrundColor;
+    h5 {
+        text-transform: uppercase;
+    }
+    &> div {
+        @include flex(center, flex-start, column);
+        flex: 1 1 20%;
+        @include breakpoints(1000px) {
+            flex: 1 1 30%;
+        }
+        position: relative;
+        padding: .5em 1em;
+        &::after {
+            content:""; 
+            background: white; 
+            position: absolute; 
+            bottom: 0; 
+            right: 0; 
+            height: 100%; 
+            @include breakpoints(1000px) {height: 0;}
+            width: 1.5px;
         }
     }
-    .search {
-        border-radius: 15px;
-        width: 80%;
-        background-color: $primarycolor;
-        @include flex (space-between);
-        margin: 0 auto;
-        color: $backgrundColor;
-        &> div {
-            @include flex();
-            flex: 0 1 20%;
-            position: relative;
-            padding: 2.2em 1em;
-            &::after {
-                content:""; 
-                background: white; 
-                position: absolute; 
-                bottom: 0; 
-                right: 0; 
-                height: 100%; 
-                width: 1.5px;
-            }
-            button {
-                margin: o auto;
-            }
+    .search-date {
+        @include flex (space-between, center, row, wrap, 5px);
+        pointer-events: none;
+        p {
+            line-height: 1.1;
         }
+        .search-day {
+            display: block;
+        }
+        &::after {
+            pointer-events: all;
+            content: "\f078";
+            font: normal normal normal 14px/1 FontAwesome;
+            cursor: pointer;
+        }
+    }
+    .number-arrival,
+    .number-departure,
+    .adults-number,
+    .children-number {
+        font-size: 3.1rem;
+        text-align: center;
+        @include breakpoints(1096px) {font-size: 2.1rem;}
+    }
+    input[type="date"]{
+        visibility: hidden;
+    }
+    #num {
+        visibility: hidden;
+    }
+    button {
+        margin: auto 1em;
+    }
+    .guests> p {
+        margin: auto;
+    } >span {
+        cursor: pointer;
+    }
+}
+.square {
+    border-radius: 15px;
+    @include positioning(relative, -45px, 0, 0, 0, 70%, 7em);
+    margin: 0 auto;
+    box-shadow: 10px 10px 20px 0px rgba(255, 255, 255, 9.67%);
+    background-color: $primarycolor;
+    @include breakpoints (576px) {
+        display: none;
     }
 }

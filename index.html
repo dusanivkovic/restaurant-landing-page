@@ -10,43 +10,101 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
+
+    <!-- header starts -->
+
     <header>
         <img src="./assets/img/Bitmap.png" alt="">
         <nav>
             <div class="logo"><a href="#">hotel</a></div>
-            <ul class="nav-list">
+            <ul id="navMenu" class="">
                 <li class="nav-list-item"><a href="#">About</a></li>
                 <li class="nav-list-item"><a href="#">Service</a></li>
                 <li class="nav-list-item"><a href="#">Rooms</a></li>
                 <li class="nav-list-item"><a href="#">Blog</a></li>
                 <li class="nav-list-item"><a href="#">Contact</a></li>
             </ul>
+            <button class="btn btn-primary">sign up</button>
+            <button class="navbar-toggle collapsed">
+                <span class="icon-bar top-bar"></span>
+                <span class="icon-bar middle-bar"></span>
+                <span class="icon-bar bottom-bar"></span>
+            </button>
+        </nav>
+        <div class="hero">
+            <h1>Exclusive boutique hotel</h1>
+            <p>Luxury boutique hotel</p>
             <div class="social">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
                 <a href="3"><i class="fab fa-instagram"></i></a>
             </div>
-        </nav>
-        <div class="hero">
-            <h1>Exclusive boutique hotel</h1>
-            <p>Luxury boutique hotel</p>
         </div>
         <div class="search">
-            <div class="arival">
-                <h4>arrival</h4>
-                <span class="arrival-number">18</span>
+            <div class="arrival">
+                <h5>arrival</h5>
                 <div class="search-date">
-                    <p>oct, 2019</p>
-                    <span>friday</span>
+                    <span class="number-arrival">18</span>
+                    <p class="data-arrival">oct, 2019<span class="search-day">friday</span></p>
                 </div>
+                <input id="arrival-date" type="date" value="">
             </div>
-            <div class="departure"></div>
-            <div class="adults"></div>
-            <div class="children"></div>
-            <button class="btn">button</button>
-
+            <div class="departure">
+                <h5>departure</h5>
+                <div class="search-date">
+                    <span class="number-departure">19</span>
+                    <p class="data-departure">oct, 2019<span class="search-day">friday</span></p>
+                </div>
+                <input id="departure-date" type="date" value="">
+            </div>
+            <div class="guests">
+                <h5>adults</h5>
+                <p class="adults-number adults">
+                    <span class="minusAdults">-</span>
+                    <span id="numAdults">2</span> 
+                    <span class="addAdults">+</span> 
+                </p>
+                <input id="num" type="number">
+            </div>
+            <div class="guests">
+                <h5>children</h5>
+                <p class="children-number children">
+                    <span class="minusChildren">-</span>
+                    <span id="numChildren">0</span> 
+                    <span class="addChildren">+</span> 
+                </p>
+                <input id="num" type="number">
+            </div>
+            <button class="btn btn-secondary">button</button>
         </div>
+        <div class="square"></div>
     </header>
+
+    <!-- header ends -->
+
+    <!-- About -->
+    <section class="about">
+        <div class="container wrapper">
+            <article class="text-card">
+                <span class="icon"><i class="fas fa-bed"></i></span>
+                <h4>Luxury Plaza Hotel for You</h4>
+                <p class="text-card-p">Distant orb has power to raise and purify our thoughts like a strain of sacred music.</p>
+                <button class="btn btn-primary">about us</button>
+            </article>
+            <div class="img-card">
+                <div class="img">
+                    <img src="./assets/img/hotel.jpg" alt="">
+                </div>
+                <article class="booking">
+                    <p>%<span>92</span><br> success booking</p>
+                    <img src="./assets/img/suucessbooking.png" alt="">
+                </article>
+                <div class="first layer"></div>
+                <div class="second layer"></div>
+            </div>
+        </div>
+    </section>
+
     <script src="./assets/js/main.js"></script>
 </body>
 </html>

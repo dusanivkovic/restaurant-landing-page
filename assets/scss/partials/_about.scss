@@ -1,0 +1,104 @@
+.about {
+    margin-top: $marginV;
+    padding: 20px 0;
+    button {
+        border: 1px solid $borderColor!important;
+    }
+    .text-card {
+        @include flex (center, flex-start, column);
+        flex: 0 0 48%;
+        @include breakpoints (768px) {
+            flex: 0 0 100%;
+        }
+        padding-left: 3em;
+        .icon {
+            padding: 20px 40px;
+            border: 1px solid $borderColor;
+            border-radius: 15px;
+            font-size: 3em;
+            color: $primarycolor
+        }
+        h4 {
+            margin-top: $marginV;
+        }
+        .text-card-p {
+            margin: $marginV 0;
+        }
+    }
+    .img-card {
+        @include flex (center, flex-start, column);
+        flex: 0 0 48%;
+        @include breakpoints (768px) {
+            flex: 0 0 100%;
+        }
+        .img {
+            border-radius: 15px;
+            padding-bottom: 80px;
+            background-color: $whiteColor;
+            margin: 0 auto;
+            box-shadow: 20px 20px 40px 0px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            border-radius: 15px;
+        }
+        .booking {
+            border-radius: 15px;
+            background-color: $whiteColor;
+            @include positioning (relative, -100px, 0, 0, 54%, 30%, auto);
+            @include breakpoints (576px) {
+                @include positioning (relative, -200px, 0, 0, 60%, 40%, auto); 
+            }
+            text-align: center;
+            padding: 10px;
+            box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.1);
+            p {
+                font-size: .6rem;
+            }
+            span {
+                font-size: 2rem;
+            }
+        }
+        &::before {
+            background-image: url('/assets/img/CombinedShape.png');
+            content: '';
+            @include positioning (relative, 300px, 0, 0, -50px, 148px, 176px);
+            z-index: -5;
+            @include breakpoints (768px) {
+                @include positioning (relative, 100px, 0, 0, 50px, 148px, 176px);
+                z-index: -5;
+            }
+        }
+    }
+    .layer {
+        margin: auto;
+        background-color: $whiteColor;
+        box-shadow: 20px 20px 40px 0px rgba(0, 0, 0, .1);
+        border-radius: 30px;
+    }
+    .first {
+        @include positioning(relative, -10em, 0, 0, 0, 90%, 50px);
+        z-index: -5;
+        @include breakpoints (1024px) {
+            @include positioning(relative, -11em, 0, 0, 0, 90%, 50px);
+        }
+        @include breakpoints (768px) {
+            @include positioning(relative, -12em, 0, 0, 0, 90%, 50px);
+        }
+        @include breakpoints (576px) {
+            @include positioning(relative, -11.3em, 0, 0, 0, 90%, 50px);
+        }
+    }
+    .second {
+        @include positioning(relative, -12em, 0, 0, 0, 80%, 50px);
+        @include breakpoints (1024px) {
+            @include positioning(relative, -13.5em, 0, 0, 0, 80%, 50px);
+        }
+        @include breakpoints (768px) {
+            @include positioning(relative, -14.5em, 0, 0, 0, 80%, 50px);
+        }
+        @include breakpoints (576px) {
+            @include positioning(relative, -14.2em, 0, 0, 0, 80%, 50px);
+        }
+        z-index: -10;
+    }
+}
