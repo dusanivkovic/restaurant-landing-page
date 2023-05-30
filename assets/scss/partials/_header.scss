@@ -83,18 +83,10 @@ nav {
         font-size: 1.2rem;
     }
     .social {
-        @include flex (space-between, center, row, nowrap, 1em);
         @include breakpointsMin(769px) {
             position: absolute;
             top: 2.1em;
             right: 3%;
-        }
-        a {
-            border: 1px solid $backgrundColor;
-            border-radius: 50%;
-            text-align: center;
-            width: 2em;
-            height: 2em;
         }
     }
 }

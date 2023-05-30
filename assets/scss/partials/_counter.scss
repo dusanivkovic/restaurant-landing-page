@@ -1,21 +1,44 @@
 .counter-up {
-    .counter-show {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      div {
-        flex: 0 0 30%;
-        @media screen and (max-width: 576px) {
-          flex: 0 0 100%;
-        }
-        .counter-num {
-          margin: 1em 0;
-          border-radius: 50px;
-        //   background-color: $primary;
-          padding: 4em 1em;
-          text-align: center;
-        //   color: $light;
-        }
+  background-color: $primarycolor;
+  color: $backgrundColor;
+  .circle_percent {
+    font-size:200px; 
+    @include positioning (relative, 0, 0, 0, 0, 1em, 1em); 
+    background: $secondaryColor; 
+    border-radius: 50%; 
+    overflow: hidden; 
+    display: inline-block; 
+    margin: 20px;
+    .circle_inner {
+      @include positioning (absolute, 0, 0, 0, 0, 1em, 1em);
+      clip: rect(0 1em 1em .5em);
+      .round_per {
+        @include positioning (absolute, 0, 0, 0, 0, 1em, 1em);
+        background: $tertiaryColor; 
+        clip: rect(0 1em 1em .5em); 
+        transform: rotate(180deg); 
+        transition: 1.05s;
       }
     }
+    .percent_more {
+      .circle_inner {clip:rect(0 .5em 1em 0em);}
+      &::after {
+        @include positioning (absolute, 0em, 0, 0, .5em);
+        background: red; 
+        content:'';}
+    }
+    .circle_inbox {
+      @include positioning (absolute, 10px, 10px, 10px, 10px);
+      background: $primarycolor; 
+      z-index:3; 
+      border-radius: 50%;
+    }
+    .percent_text {
+      @include positioning (absolute, 50%, 0, 0, 50%);
+      font-size: 36px; 
+      transform: translate(-50%,-50%); 
+      z-index: 3;}
+  }
 }
+
+

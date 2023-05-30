@@ -1,0 +1,4 @@
+.gallery > .wrapper > div {
+    @include flex (center, center, row, wrap, 0);
+    flex: 1 1 15%;
+}
