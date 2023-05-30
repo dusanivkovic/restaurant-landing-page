@@ -1,0 +1,21 @@
+.counter-up {
+    .counter-show {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      div {
+        flex: 0 0 30%;
+        @media screen and (max-width: 576px) {
+          flex: 0 0 100%;
+        }
+        .counter-num {
+          margin: 1em 0;
+          border-radius: 50px;
+        //   background-color: $primary;
+          padding: 4em 1em;
+          text-align: center;
+        //   color: $light;
+        }
+      }
+    }
+}

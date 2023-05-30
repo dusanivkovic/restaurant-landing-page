@@ -2,18 +2,9 @@
 .bck-white {
     background-color: $whiteColor!important;
 }
-.section-heading {
-    margin-top:2em;
-    @include breakpoints (768px) {
-        margin-bottom: 3em;
-    }
-}
 .about,
 .spa,
-.restaurant,
-.advantages {
-    // margin-top: $marginV;
-    padding: 40px 0;
+.restaurant {
     button {
         border: 1px solid $borderColor!important;
     }
@@ -33,6 +24,15 @@
         }
     }
     .img-card {
+        background-color: transparent;
+        box-shadow: none;
+        .img {
+            background-color: $whiteColor;
+            margin: 0 auto;
+            box-shadow: 20px 20px 40px 0px rgba(0, 0, 0, 0.1);
+            border-radius: 30px;
+            padding-bottom: 80px;
+        }
         .booking-footer {
             @include flex (space-evenly, center, column);
             padding: 10px;
@@ -71,34 +71,17 @@
         #restaurant-tile {
             background: rgba($primarycolor, .9);
         }
-
     }
-
-    .advantages-card{
-        align-items: center;
-        .img {
-            @include flex (center, center);
-            padding: 2em 0 8em ;
-        }
-        img {
-            width: 90%;
-            border-radius: 15px;
-        }
-        .text-card {
-            position: relative;
-            top: -22em;
-            padding: 5px;
-            .icon {
-                background-color: $whiteColor;
-                color: $primaryTextColor;
-            }
-        }
-        p {
-            margin: 10px 0!important;
-        }
-        h5 {
-            margin-top: 5em;
-            @include breakpointsMin(1024px) {margin-top: 7em}
+}
+.advantages-card{
+    p {
+        margin: 10px 0!important;
+    }
+}
+.advantages {
+    .wrapper {
+        @include breakpoints (768px) {
+        @include flex (center, center, column-reverse, nowrap, 0px);
         }
     }
     .advantages-wrapper {
@@ -106,11 +89,10 @@
         flex: 0 0 48%;
         @include breakpoints (768px) {
             flex: 0 0 100%;
+            margin: 30px;
         }
-        position: relative;
-        top: -5em;
         > div {
-            @include flex (space-between, center,  row, nowrap, 5px);
+            @include flex (space-between, center,  row, wrap, 5px);
             &:first-child {
                 justify-content: center;
                 gap: 2em;
@@ -122,12 +104,14 @@
         }
         article {
             flex: 0 0 48%;
+            @include breakpoints (576px) {flex: 0 0 100%;}
             box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.1);
             border-radius: 30px;
             padding: 20px;
             height: calc(17em - 5px);
             &:first-child {background-color: #EDF1F5;}
         }
-        h5 {margin: 2em 0;}
+        h5 {margin: 1em 0;}
     } 
+    h3 {text-align: center;}
 }

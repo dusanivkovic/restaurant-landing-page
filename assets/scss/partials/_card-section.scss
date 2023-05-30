@@ -1,0 +1,46 @@
+.rooms,
+.blog {
+    .section-headings {
+        @include flex (space-between, center,row, wrap, 3em);
+    }
+    .img-card {z-index: unset;}
+    .text-card-footer {
+        padding: 1em;
+        top: 2em;
+    }
+    .blue-card {
+        background-color: $primarycolor;
+        p,
+        h4 {color: $backgrundColor!important;}
+    }
+    h3 {text-align: center;}
+}
+.testimonials {
+    .img-card {
+        z-index: unset;
+        .img {
+            margin: 0; &:last-child  {color: rgba(#7F95AE, .4);}
+            > div {
+                @include flex (space-evenly, center)
+            }
+        }
+        img {
+            width: 5em;
+            border-radius: 50%;
+            height: 5em;
+            padding: 10px;
+        }
+        i {
+            color: rgba(#7F95AE, .8);
+        }
+    }
+    .text-card-footer {
+        position: initial;
+    }
+    h5,
+    h4 {text-align: center;}
+    .icon {
+        padding-left: 80%;
+        border: none;
+    }
+}
