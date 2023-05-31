@@ -16,7 +16,6 @@ const navBar = document.querySelector('.navbar-toggle');
 // Remove class Collapsed from nav button
 navBar.addEventListener('click', () => {
     navBar.classList.toggle('collapsed');
-    console.log(menuList.className)
     if (menuList.className == 'toggle') {
         menuList.style.display = 'none';
         menuList.classList.remove('toggle');
@@ -24,7 +23,6 @@ navBar.addEventListener('click', () => {
         menuList.style.display = 'block';
         menuList.classList.add('toggle');
     }
-    // menuList.style.display = 'block';
 })
 //show calendar on departure and arrival
 showCalendarArrival.addEventListener('click', (e) => {
@@ -94,3 +92,68 @@ $(".circle_percent").each(function() {
 		},1000);
 	} 
 });
+// call Owl Carousel
+
+$(document).ready(function(){
+    $(".owl-carousel").each(function () {
+        $(this).owlCarousel({
+            items: 3, //10 items above 1000px browser width
+            itemsDesktop: [1440, 3], //5 items between 1000px and 901px
+            itemsDesktopSmall: [768, 1], // 3 items betweem 900px and 601px
+            itemsTablet: [576, 1], //2 items between 600 and 0;
+            //  itemsMobile : false , // itemsMobile disabled - inherit from itemsTablet option
+            dots: false, 
+            stagePadding: Number, //stagePadding: 50,
+            loop: false, 
+            margin: 30, 
+            rtl: true, 
+            pagination: false,
+            nav: true,
+            navText: ["<div class='nav-button owl-prev'>‹</div>", "<div class='nav-button owl-next'>›</div>"],
+            autoplay:true,
+            autoplayTimeout:1000,
+            autoplayHoverPause:true,
+              responsive:{
+                0:{
+                    items:1
+                },
+                576:{
+                    items:1
+                },
+                768:{
+                    items:1
+                },
+                1000:{
+                    items:2
+                },
+                1440:{
+                    items:3
+                }
+            }
+        });
+    });
+});
+
+// responsive carousel
+
+
+
+// jQuery('.owl-gallery').owlCarousel({
+//     loop:true,
+//     margin:10,
+//     nav:true,
+//     responsive:{
+//         0:{
+//             items:1
+//         },
+//         576:{
+//             items:2
+//         },
+//         992:{
+//             items:6
+//         }
+//     }
+// })
+
+
+  
