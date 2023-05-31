@@ -92,7 +92,7 @@
             margin: 30px;
         }
         > div {
-            @include flex (space-between, center,  row, wrap, 5px);
+            @include flex (space-between, center,  row, wrap, 15px);
             &:first-child {
                 justify-content: center;
                 gap: 2em;

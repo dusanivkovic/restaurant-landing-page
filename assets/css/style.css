@@ -639,6 +639,10 @@ nav .navbar-toggle.collapsed .bottom-bar {
   transform: rotate(0);
 }
 
+.blue-nav {
+  background-color: #2C4664 !important;
+}
+
 .hero {
   width: 32%;
   margin-top: 40px;
@@ -960,7 +964,7 @@ nav .navbar-toggle.collapsed .bottom-bar {
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 5px;
+  gap: 15px;
 }
 .advantages .advantages-wrapper > div:first-child {
   justify-content: center;

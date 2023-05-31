@@ -13,15 +13,18 @@ const increaseAdults = document.querySelector('.addAdults');
 const increaseChildren = document.querySelector('.addChildren');
 const menuList = document.querySelector('#navMenu');
 const navBar = document.querySelector('.navbar-toggle');
+const navMenu = document.querySelector('nav');
 // Remove class Collapsed from nav button
 navBar.addEventListener('click', () => {
     navBar.classList.toggle('collapsed');
     if (menuList.className == 'toggle') {
         menuList.style.display = 'none';
         menuList.classList.remove('toggle');
+        navMenu.classList.remove('blue-nav');
     }else {
         menuList.style.display = 'block';
         menuList.classList.add('toggle');
+        navMenu.classList.add('blue-nav');
     }
 })
 //show calendar on departure and arrival
