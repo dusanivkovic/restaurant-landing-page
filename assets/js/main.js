@@ -11,21 +11,35 @@ const decreaseAdults = document.querySelector('.minusAdults');
 const decreaseChildren = document.querySelector('.minusChildren');
 const increaseAdults = document.querySelector('.addAdults');
 const increaseChildren = document.querySelector('.addChildren');
-const menuList = document.querySelector('#navMenu');
-const navBar = document.querySelector('.navbar-toggle');
-const navMenu = document.querySelector('nav');
+const openModal = document.querySelector('.modal');
+const modal = document.querySelector('#modal');
+const closeModal = document.querySelector('.close-modal');
+var galleryImg = $('.img-box');
+var largeImg = $('#large-img');
+var btnNav = $('.navbar-toggle');
+var listMenu = $('#navMenu');
+var nav = $('nav');
 // Remove class Collapsed from nav button
-navBar.addEventListener('click', () => {
-    navBar.classList.toggle('collapsed');
-    if (menuList.className == 'toggle') {
-        menuList.style.display = 'none';
-        menuList.classList.remove('toggle');
-        navMenu.classList.remove('blue-nav');
-    }else {
-        menuList.style.display = 'block';
-        menuList.classList.add('toggle');
-        navMenu.classList.add('blue-nav');
+btnNav.on('click', function () {
+    listMenu.slideToggle('fast');
+    nav.toggleClass('blue-nav');
+})
+// open Modal
+openModal.addEventListener('click', () => {modal.style.display = 'flex'})
+// close Modal
+window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
     }
+  }
+  closeModal.addEventListener('click', () => {modal.style.display = 'none'})
+// gallery slide show
+galleryImg.each(function() {
+    $(this).on('click', function () {
+        var swapImg = largeImg.attr('src');
+        largeImg.attr('src', $(this).find('img').attr('src'));
+        $(this).find('img').attr('src', swapImg);
+    });
 })
 //show calendar on departure and arrival
 showCalendarArrival.addEventListener('click', (e) => {
@@ -70,19 +84,23 @@ function increasePeople (role) {
 }
 
 //Counter function
+var  num = 0;
 $(".circle_percent").each(function() {
+    var circleArr = ['Years of Expirience', 'Super Suites', 'Family Rooms', 'Hotel Personal'];
     var $this = $(this),
 		$dataV = $this.data("percent"),
 		$dataDeg = $dataV * 3.6,
 		$round = $this.find(".round_per");
         $round.css("transform", "rotate(" + parseInt($dataDeg + 180) + "deg)");	
         $this.append('<div class="circle_inbox"><span class="percent_text"></span></div>');
+        $this.append(`<p class="percent_text_small">${circleArr[num]}</p>`);
+        num++;
         $this.prop('Counter', 0).animate({Counter: $dataV},
 	{
 		duration: 2000, 
 		easing: 'swing', 
 		step: function (now) {
-            $this.find(".percent_text").text(Math.ceil(now)+"%");
+            $this.find(".percent_text").html(Math.ceil(now)+`%`);
         }
     });
 	if($dataV >= 51){
@@ -137,26 +155,6 @@ $(document).ready(function(){
     });
 });
 
-// responsive carousel
-
-
-
-// jQuery('.owl-gallery').owlCarousel({
-//     loop:true,
-//     margin:10,
-//     nav:true,
-//     responsive:{
-//         0:{
-//             items:1
-//         },
-//         576:{
-//             items:2
-//         },
-//         992:{
-//             items:6
-//         }
-//     }
-// })
 
 
   

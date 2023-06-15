@@ -29,6 +29,9 @@ nav {
             z-index: 1;
             background-color: $primarycolor;
         }
+        li {
+            margin-bottom: 1em;
+        }
     }
     button {
         color: $borderColor!important;
@@ -91,14 +94,29 @@ nav {
         }
     }
 }
-.search {
+#modal {
     @include breakpoints (576px) {
         display: none;
+        background-color: rgba($primarycolor, .8);
+        @include positioning (sticky, 0, 0, 0, 0, 100%, 100%);
+        z-index: 10;
+        overflow: auto;
+        .close-modal {
+            @include positioning (absolute, 10px, 10px, unset, unset);
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 2rem;
+            color: $backgrundColor;
+            font-weight: 500;
+        }
     }
+}
+.search {
     border-radius: 15px;
     width: 85%;
     background-color: $secondaryColor;
-    @include flex (space-between, flex-start, row, wrap);
+    @include flex (space-evenly, flex-start, row, wrap);
     margin: $marginV auto 0;
     color: $backgrundColor;
     h5 {
@@ -108,19 +126,15 @@ nav {
         @include flex(center, flex-start, column);
         flex: 1 1 20%;
         @include breakpoints(1000px) {
-            flex: 0 0 30%;
+            flex: 1 0 30%;
         }
         position: relative;
         padding: .5em 1em;
         &::after {
             content:""; 
             background: white; 
-            position: absolute; 
-            bottom: 0; 
-            right: 0; 
-            height: 100%; 
+            @include positioning (absolute, unset, 0, 0, unset, 1.5px, 100%);
             @include breakpoints(1000px) {height: 0;}
-            width: 1.5px;
         }
     }
     .search-date {
@@ -165,11 +179,19 @@ nav {
 }
 .square {
     border-radius: 15px;
-    @include positioning(relative, -45px, 0, 0, 0, 70%, 7em);
+    @include positioning(relative, -2em, 0, 0, 0, 70%, 7em);
     margin: 0 auto;
     box-shadow: 10px 10px 20px 0px rgba(255, 255, 255, 9.67%);
     background-color: $primarycolor;
     @include breakpoints (1000px) {
         display: none;
     }
+}
+.modal {
+    margin: auto;
+    text-align: center;
+    color: $primarycolor;
+    font-size: 3rem;
+    display: none;
+    @include breakpoints (576px) {display: block;}
 }

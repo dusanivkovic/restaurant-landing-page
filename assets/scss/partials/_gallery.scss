@@ -1,4 +1,7 @@
 .gallery > .wrapper > div {
     @include flex (center, center, row, wrap, 0);
-    flex: 1 1 15%;
+    flex: 1 1 17%;
+    li {
+        cursor: pointer;
+    }
 }

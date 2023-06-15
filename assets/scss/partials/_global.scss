@@ -109,32 +109,9 @@ p {
         color: $primaryTextColor;
     }
 }
-.nav-button {
-    font-size: 2rem!important;
-}
-.owl-nav {
-    position: relative;
-    top: -29em;
-    display: flex;
-    justify-content: space-between;
-    margin: 0 -1.2em;
-    z-index: -1;
-    .owl-next,
-    .owl-prev {
-        color: $primaryTextColor;
-        // padding: 0 .15em;
-        // background-color: $whiteColor;
-        border-radius: 50%;
-        // box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.1);
-    }
-}
-.owl-stage-outer {    padding: 0 0px 100px;}
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
+
 .wrapper {
-    @include flex(space-between, center, row, wrap, 10px);
+    @include flex (space-between, center, row, wrap, 10px);
     margin-top: $marginV;
 }
 .social {
@@ -144,7 +121,7 @@ p {
         border-radius: 50%;
         width: 2em;
         height: 2em;
-        padding: 0 .5em;
+        padding: 0.3em .5em;
     }
 }
 .icon {
@@ -175,10 +152,11 @@ p {
     box-shadow: 20px 20px 40px 0px rgba(0, 0, 0, 0.1);
     border-radius: 30px;
     z-index: 100;
-    flex: 1 1 31%;
+    flex: 1 1 30%;
+    // width: 94%;
     padding: 16px;
     background-color: $whiteColor;
-    margin: 10px 0 20px;
+    margin: 10px 0px 20px;
     @include breakpoints (768px) {
         flex: 0 0 100%;
     }
@@ -213,7 +191,7 @@ p {
 }
 .square-before {
     &::before {
-    background-image: url('/assets/img/CombinedShape.png');
+    background-image: url('./../img/CombinedShape.png');
     content: '';
     @include positioning (relative, 300px, 0, 0, -50px, 148px, 176px);
     z-index: -5;
@@ -225,7 +203,7 @@ p {
 }
 .square-after {
     &::after {
-    background-image: url('/assets/img/CombinedShape.png');
+    background-image: url('./../img/CombinedShape.png');
     content: '';
     @include positioning (relative, -25em, 0, 0, 24em, 148px, 176px);
     z-index: -5;
@@ -296,23 +274,9 @@ p {
     @include breakpoints (1024px) {
         @include positioning(relative, 5em, 0, 0, 0, 90%, 50px);
     }
-    // @include breakpoints (768px) {
-    //     @include positioning(relative, -15em, 0, 0, 0, 90%, 50px);
-    // }
-    // @include breakpoints (576px) {
-    //     @include positioning(relative, -14.8em, 0, 0, 0, 90%, 50px);
-    // }
+
 }
 .card-layer-second {
     @include positioning(relative, 2.5em, 0, 0, 0, 80%, 50px);
-    // @include breakpoints (1024px) {
-    //     @include positioning(relative, 1em, 0, 0, 0, 80%, 50px);
-    // }
-    // @include breakpoints (768px) {
-    //     @include positioning(relative, -17.5em, 0, 0, 0, 80%, 50px);
-    // }
-    // @include breakpoints (576px) {
-    //     @include positioning(relative, -17.4em, 0, 0, 0, 80%, 50px);
-    // }
     z-index: -10;
 }

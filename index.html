@@ -46,47 +46,56 @@
                 <a href="3"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
-        <div class="search">
-            <div class="arrival">
-                <h5>arrival</h5>
-                <div class="search-date">
-                    <span class="number-arrival">18</span>
-                    <p class="data-arrival">oct, 2019<span class="search-day">friday</span></p>
+        <div id="modal">
+            <span class="close-modal">X</span>
+            <div class="search">
+                <div class="arrival">
+                    <h5>arrival</h5>
+                    <div class="search-date">
+                        <span class="number-arrival">18</span>
+                        <p class="data-arrival">oct, 2019<span class="search-day">friday</span></p>
+                    </div>
+                    <input id="arrival-date" type="date" value="">
                 </div>
-                <input id="arrival-date" type="date" value="">
-            </div>
-            <div class="departure">
-                <h5>departure</h5>
-                <div class="search-date">
-                    <span class="number-departure">19</span>
-                    <p class="data-departure">oct, 2019<span class="search-day">friday</span></p>
+                <div class="departure">
+                    <h5>departure</h5>
+                    <div class="search-date">
+                        <span class="number-departure">19</span>
+                        <p class="data-departure">oct, 2019<span class="search-day">friday</span></p>
+                    </div>
+                    <input id="departure-date" type="date" value="">
                 </div>
-                <input id="departure-date" type="date" value="">
+                <div class="guests">
+                    <h5>adults</h5>
+                    <p class="adults-number adults">
+                        <span class="minusAdults">-</span>
+                        <span id="numAdults">2</span> 
+                        <span class="addAdults">+</span> 
+                    </p>
+                    <input id="num" type="number">
+                </div>
+                <div class="guests">
+                    <h5>children</h5>
+                    <p class="children-number children">
+                        <span class="minusChildren">-</span>
+                        <span id="numChildren">0</span> 
+                        <span class="addChildren">+</span> 
+                    </p>
+                    <input id="num" type="number">
+                </div>
+                <button class="btn btn-secondary">button</button>
             </div>
-            <div class="guests">
-                <h5>adults</h5>
-                <p class="adults-number adults">
-                    <span class="minusAdults">-</span>
-                    <span id="numAdults">2</span> 
-                    <span class="addAdults">+</span> 
-                </p>
-                <input id="num" type="number">
-            </div>
-            <div class="guests">
-                <h5>children</h5>
-                <p class="children-number children">
-                    <span class="minusChildren">-</span>
-                    <span id="numChildren">0</span> 
-                    <span class="addChildren">+</span> 
-                </p>
-                <input id="num" type="number">
-            </div>
-            <button class="btn btn-secondary">button</button>
+            <div class="square"></div>
         </div>
-        <div class="square"></div>
+
     </header>
 
     <!-- header ends -->
+    <section class="modal py">
+        <div class="container">
+            <i class="fas fa-plus-circle"></i>
+        </div>
+    </section>
 
     <!-- About -->
     <section class="about py">
@@ -190,7 +199,7 @@
                     </article>
                 </div>
             </div>
-            <div class="img-card advantages-card">
+            <div class="img-card advantages-card square-before">
                 <div class="img">
                     <img src="./assets/img/advantages.jpg" alt="">
                     <span class="icon icon-res-position"><i class="fas fa-wifi"></i></span>
@@ -450,12 +459,12 @@
 
     <section id="" class="gallery py">
         <div id="owl-gallery" class="wrapper">
-          <div class="item"><a href="#" class="img-box"><img src="./assets/img/1.jpg" alt=""></a></div>
-          <div class="item"><a href="#" class="img-box"><img src="./assets/img/2.jpg" alt=""></a></div>
-          <div class="item"><a href="#" class="img-box"><img src="./assets/img/3.jpg" alt=""></a></div>
-          <div class="item"><a href="#" class="img-box"><img src="./assets/img/4.jpg" alt=""></a></div>
-          <div class="item"><a href="#" class="img-box"><img src="./assets/img/5.jpg" alt=""></a></div>
-          <div class="item"><a href="#" class="img-box"><img src="./assets/img/6.jpg" alt=""></a></div>
+          <div class="item"><li  class="img-box"><img src="./assets/img/1.jpg" alt=""></li></div>
+          <div class="item"><li  class="img-box"><img src="./assets/img/2.jpg" alt=""></li></div>
+          <div class="item"><li  class="img-box"><img src="./assets/img/3.jpg" alt=""></li></div>
+          <div class="item"><li  class="img-box"><img src="./assets/img/4.jpg" alt=""></li></div>
+          <div class="item"><li  class="img-box"><img src="./assets/img/5.jpg" alt=""></li></div>
+          <div class="item"><li   class="img-box"><img id="large-img" src="./assets/img/6.jpg" alt=""></li></div>
       </div>
       </section>
 

@@ -61,7 +61,7 @@
             color: $primarycolor;
             width: 2rem;
             height: 2rem;
-            // padding: 5px;
+            padding: .5em;
             text-align: center;
         }
         .hotel-footer> .radio {
@@ -112,6 +112,6 @@
             &:first-child {background-color: #EDF1F5;}
         }
         h5 {margin: 1em 0;}
-    } 
+    }
     h3 {text-align: center;}
 }
