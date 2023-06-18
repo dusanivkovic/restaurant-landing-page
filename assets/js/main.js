@@ -21,8 +21,9 @@ var listMenu = $('#navMenu');
 var nav = $('nav');
 // Remove class Collapsed from nav button
 btnNav.on('click', function () {
-    listMenu.slideToggle('fast');
-    nav.toggleClass('blue-nav');
+    listMenu.slideToggle(100);
+    btnNav.toggleClass('collapsed');
+    nav.toggleClass('blue-nav', 300, "swing");
 })
 // open Modal
 openModal.addEventListener('click', () => {modal.style.display = 'flex'})
@@ -32,7 +33,7 @@ window.onclick = function(event) {
       modal.style.display = "none";
     }
   }
-  closeModal.addEventListener('click', () => {modal.style.display = 'none'})
+  closeModal.addEventListener('click', () => {modal.style.display = 'none'});
 // gallery slide show
 galleryImg.each(function() {
     $(this).on('click', function () {

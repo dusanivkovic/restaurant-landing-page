@@ -1,8 +1,8 @@
 header {
-    height: 100vh;
+    min-height: 100vh;
     img {
         position: absolute;
-        height: 100vh;
+        min-height: 100vh;
         z-index: -999;
     }
     h1,
@@ -88,9 +88,7 @@ nav {
     }
     .social {
         @include breakpointsMin(769px) {
-            position: absolute;
-            top: 2.1em;
-            right: 3%;
+            @include positioning (absolute, 2.1em, 3%, unset, unset);
         }
     }
 }
@@ -98,23 +96,22 @@ nav {
     @include breakpoints (576px) {
         display: none;
         background-color: rgba($primarycolor, .8);
-        @include positioning (sticky, 0, 0, 0, 0, 100%, 100%);
+        @include positioning (absolute, 10em, 0, 0, 0, 100%, 100%);
         z-index: 10;
         overflow: auto;
         .close-modal {
-            @include positioning (absolute, 10px, 10px, unset, unset);
-            position: absolute;
-            top: 10px;
-            right: 10px;
+            @include positioning (absolute, 0px, 10px, unset, unset);
             font-size: 2rem;
             color: $backgrundColor;
             font-weight: 500;
+            z-index: 100;
         }
     }
 }
 .search {
     border-radius: 15px;
     width: 85%;
+    @include breakpoints (576px) {width: 92%;}
     background-color: $secondaryColor;
     @include flex (space-evenly, flex-start, row, wrap);
     margin: $marginV auto 0;
@@ -164,7 +161,7 @@ nav {
     input[type="date"]{
         visibility: hidden;
     }
-    #num {
+    .num-of-people {
         visibility: hidden;
     }
     button {

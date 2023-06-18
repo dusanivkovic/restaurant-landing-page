@@ -156,7 +156,7 @@ p {
   border-radius: 50%;
   width: 2em;
   height: 2em;
-  padding: 0.3em 0.5em;
+  padding: 0em 0.5em;
 }
 
 .icon {
@@ -513,11 +513,11 @@ p {
 }
 
 header {
-  height: 100vh;
+  min-height: 100vh;
 }
 header img {
   position: absolute;
-  height: 100vh;
+  min-height: 100vh;
   z-index: -999;
 }
 header h1,
@@ -633,6 +633,10 @@ nav .navbar-toggle.collapsed .bottom-bar {
     position: absolute;
     top: 2.1em;
     right: 3%;
+    bottom: unset;
+    left: unset;
+    width: auto;
+    height: auto;
   }
 }
 
@@ -640,8 +644,8 @@ nav .navbar-toggle.collapsed .bottom-bar {
   #modal {
     display: none;
     background-color: rgba(44, 70, 100, 0.8);
-    position: sticky;
-    top: 0;
+    position: absolute;
+    top: 10em;
     right: 0;
     bottom: 0;
     left: 0;
@@ -652,18 +656,16 @@ nav .navbar-toggle.collapsed .bottom-bar {
   }
   #modal .close-modal {
     position: absolute;
-    top: 10px;
+    top: 0px;
     right: 10px;
     bottom: unset;
     left: unset;
     width: auto;
     height: auto;
-    position: absolute;
-    top: 10px;
-    right: 10px;
     font-size: 2rem;
     color: #F2F2F2;
     font-weight: 500;
+    z-index: 100;
   }
 }
 
@@ -679,6 +681,11 @@ nav .navbar-toggle.collapsed .bottom-bar {
   gap: 0px;
   margin: 40px auto 0;
   color: #F2F2F2;
+}
+@media (max-width: 576px) {
+  .search {
+    width: 92%;
+  }
 }
 .search h5 {
   text-transform: uppercase;
@@ -754,7 +761,7 @@ nav .navbar-toggle.collapsed .bottom-bar {
 .search input[type=date] {
   visibility: hidden;
 }
-.search #num {
+.search .num-of-people {
   visibility: hidden;
 }
 .search button {
@@ -932,7 +939,7 @@ nav .navbar-toggle.collapsed .bottom-bar {
   color: #2C4664;
   width: 2rem;
   height: 2rem;
-  padding: 0.5em;
+  padding: 0 0.5em;
   text-align: center;
 }
 .about .img-card .hotel-footer > .radio,
@@ -997,7 +1004,7 @@ nav .navbar-toggle.collapsed .bottom-bar {
   box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.1);
   border-radius: 30px;
   padding: 20px;
-  height: calc(17em - 5px);
+  height: calc(20em - 5px);
 }
 @media (max-width: 576px) {
   .advantages .advantages-wrapper article {
