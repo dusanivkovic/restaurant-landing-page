@@ -629,8 +629,19 @@ nav .navbar-toggle.collapsed .bottom-bar {
 
 .hero {
   width: 32%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0px;
   margin-top: 40px;
   margin-left: 2.9em;
+}
+@media (max-width: 768px) {
+  .hero {
+    width: 80%;
+  }
 }
 .hero p {
   margin-left: 1.2em;

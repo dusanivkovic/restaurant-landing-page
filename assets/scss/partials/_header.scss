@@ -80,6 +80,8 @@ nav {
 .blue-nav {background-color: $primarycolor!important;}
 .hero {
     width: 32%;
+    @include breakpoints (768px) {width: 80%;}
+    @include flex (center, flex-start, column);
     margin-top: $marginV;
     margin-left: $marginleft;
     p {
