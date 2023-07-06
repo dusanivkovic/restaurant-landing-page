@@ -1,7 +1,7 @@
 .rooms,
 .blog {
     .section-headings {
-        @include flex (space-between, center,row, wrap, 3em);
+        @include flex (center, center,row, wrap, 3em);
     }
     .img-card {z-index: unset;}
     .text-card-footer {

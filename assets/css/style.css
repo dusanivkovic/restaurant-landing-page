@@ -143,7 +143,7 @@ p {
   margin-top: 40px;
 }
 
-.social {
+.social-box {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -151,12 +151,20 @@ p {
   flex-wrap: nowrap;
   gap: 1em;
 }
-.social a {
+.social-box .social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0px;
   border: 1px solid #F2F2F2;
   border-radius: 50%;
-  width: 2em;
-  height: 2em;
-  padding: 0.25em 0.5em;
+}
+.social-box .social a {
+  padding: 0.2em 0.7em;
+  font-size: 1.1rem;
+  text-align: center;
 }
 
 .icon {
@@ -629,7 +637,7 @@ nav .navbar-toggle.collapsed .bottom-bar {
   font-size: 1.2rem;
 }
 @media (min-width: 769px) {
-  .hero .social {
+  .hero .social-box {
     position: absolute;
     top: 2.1em;
     right: 3%;
@@ -937,10 +945,13 @@ nav .navbar-toggle.collapsed .bottom-bar {
   border-radius: 50%;
   background: linear-gradient(#7F95AE, #E5E9EF);
   color: #2C4664;
-  width: 2rem;
-  height: 2rem;
-  padding: 0.25em 0.5em;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0px;
+  padding: 7px;
 }
 .about .img-card .hotel-footer > .radio,
 .spa .img-card .hotel-footer > .radio,
@@ -1024,7 +1035,7 @@ nav .navbar-toggle.collapsed .bottom-bar {
 .rooms .section-headings,
 .blog .section-headings {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;

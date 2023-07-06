@@ -59,10 +59,8 @@
             border-radius: 50%;
             background: linear-gradient(#7F95AE, #E5E9EF);
             color: $primarycolor;
-            width: 2rem;
-            height: 2rem;
-            padding: 0.25em .5em;
-            text-align: center;
+            @include flex (center, center);
+            padding: 7px;
         }
         .hotel-footer> .radio {
             background: $primarycolor!important;

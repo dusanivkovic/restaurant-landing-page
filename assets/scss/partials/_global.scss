@@ -114,16 +114,20 @@ p {
     @include flex (space-between, center, row, wrap, 10px);
     margin-top: $marginV;
 }
-.social {
+.social-box {
     @include flex (center, center, row, nowrap, 1em);
-    a {
+    .social {
+        @include flex (center, center);
         border: 1px solid $backgrundColor;
         border-radius: 50%;
-        width: 2em;
-        height: 2em;
-        padding: 0.25em .5em;
+        a {
+            padding: .2em .7em;
+            font-size: 1.1rem;
+            text-align: center;
+        }
     }
 }
+
 .icon {
     padding: 20px 40px;
     border: 1px solid $borderColor;

@@ -86,7 +86,7 @@ nav {
         margin-left: 1.2em;
         font-size: 1.2rem;
     }
-    .social {
+    .social-box {
         @include breakpointsMin(769px) {
             @include positioning (absolute, 2.1em, 3%, unset, unset);
         }
