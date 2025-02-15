@@ -119,6 +119,8 @@ p {
     .social {
         border: 1px solid $backgrundColor;
         border-radius: 50%;
+        float: left;
+        text-align: center;
         a {
             padding: .2em .7em;
             font-size: 1.1rem;

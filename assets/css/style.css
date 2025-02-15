@@ -153,6 +153,8 @@ p {
 .social-box .social {
   border: 1px solid #F2F2F2;
   border-radius: 50%;
+  float: left;
+  text-align: center;
 }
 .social-box .social a {
   padding: 0.2em 0.7em;
