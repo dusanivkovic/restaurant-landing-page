@@ -117,12 +117,13 @@ p {
 .social-box {
     @include flex (center, center, row, nowrap, 1em);
     .social {
+        @include flex (center, center, row, nowrap);
         border: 1px solid $backgrundColor;
         border-radius: 50%;
-        float: left;
-        text-align: center;
+        padding: 5px;
+        width: 2.7em;
+        height: 2.7em;
         a {
-            padding: .2em .7em;
             font-size: 1.1rem;
             text-align: center;
         }
