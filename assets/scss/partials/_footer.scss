@@ -3,8 +3,10 @@
     h4,
     h5,
     p {color: $backgrundColor;}
-    li {margin: 5px 0;}
-    i {margin-right: 10px;}
+    li {
+        margin: 5px 0;
+        i {margin-right: 10px;}
+    }
     input {padding: 10px ;}
     .footer-menu-list >
     ul {

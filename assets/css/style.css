@@ -33,8 +33,7 @@ body {
 img {
   width: 100%;
   vertical-align: middle;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 a {
@@ -152,12 +151,6 @@ p {
   gap: 1em;
 }
 .social-box .social {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  gap: 0px;
   border: 1px solid #F2F2F2;
   border-radius: 50%;
 }
@@ -1253,13 +1246,12 @@ nav .navbar-toggle.collapsed .bottom-bar {
 .footer li {
   margin: 5px 0;
 }
-.footer i {
+.footer li i {
   margin-right: 10px;
 }
 .footer input {
   padding: 10px;
 }
 .footer .footer-menu-list > ul {
-  -moz-column-count: 2;
-       column-count: 2;
+  column-count: 2;
 }
